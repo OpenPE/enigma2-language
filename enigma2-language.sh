@@ -50,5 +50,5 @@ make *.po
 echo "Done!"
 echo ""
 git add *.po
-git commit -m "Update all language po files with latest strings using Persian Prince's enigma2-language.sh"
+git commit -S -m "Update all language po files with latest strings using Persian Prince's enigma2-language.sh"
 git push
