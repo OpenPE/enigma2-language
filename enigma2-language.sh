@@ -4,6 +4,10 @@ echo "enigma2 automatic language update script by Persian Prince"
 echo ""
 echo "https://github.com/PLi-metas"
 echo ""
+echo "Enter your github username (Your fork is needed):"
+echo ""
+read GITHUBFORK
+echo ""
 if [ -d enigma2 ] ; then
 	cd enigma2
 	echo "Updating PLi's enigma2 for latest changes ..."
@@ -13,9 +17,9 @@ if [ -d enigma2 ] ; then
 	echo ""
 else
 	echo "You don't have the enigma2 directory yet!"
-	echo "It means we have to clone it from PLi's git first, Please wait ..."
+	echo "It means we have to clone it from git first, Please wait ..."
 	echo ""
-	git clone -b develop https://github.com/OpenPLi/enigma2.git
+	git clone -b develop https://github.com/$GITHUBFORK/enigma2.git
 	echo "Cloned successfully!"
 	echo ""
 	cd enigma2
@@ -50,5 +54,5 @@ make *.po
 echo "Done!"
 echo ""
 git add *.po
-git commit -S -m "Update all language po files with latest strings using Persian Prince's enigma2-language.sh"
+git commit -S -m "Update all language po files with latest strings using https://github.com/PLi-metas/enigma2-language/blob/master/enigma2-language.sh"
 git push
