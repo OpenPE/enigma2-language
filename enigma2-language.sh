@@ -19,7 +19,7 @@ else
 	echo "You don't have the enigma2 directory yet!"
 	echo "It means we have to clone it from git first, Please wait ..."
 	echo ""
-	git clone -b develop https://github.com/$GITHUBFORK/enigma2.git
+	git clone -b develop --depth 1 https://github.com/$GITHUBFORK/enigma2.git
 	echo "Cloned successfully!"
 	echo ""
 	cd enigma2
